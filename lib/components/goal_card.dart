@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
+import 'package:oscharity/models/goal.dart';
 
 class GoalCard extends StatelessWidget {
-  final ImageProvider image;
-  final String title;
-  final String text;
+  final Goal goal;
 
-  GoalCard({@required this.image,@required this.title,@required this.text});
+  GoalCard({@required this.goal});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class GoalCard extends StatelessWidget {
                 topRight: Radius.circular(20),
               ),
               child: Image(
-                image: image,
+                image: goal.imageMain,
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.fitWidth,
@@ -38,7 +37,7 @@ class GoalCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 8),
               child: Text(
-                title,
+                goal.title,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -51,7 +50,7 @@ class GoalCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
               child: Text(
-                text,
+                goal.shortDesc,
                 style: TextStyle(
                 ),
               ),
