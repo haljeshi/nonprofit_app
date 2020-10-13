@@ -65,15 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
           items: <Widget>[
             MyNavigationItem(
               icon: Icon(Icons.adjust, size: 20, color: Colors.black,),
-              title: 'Goals',
+              title: 'المشاريع',
             ),
             MyNavigationItem(
               icon: Icon(Icons.payment, size: 20, color: Colors.black,),
-              title: 'Donations',
+              title: 'التبرعات',
             ),
             MyNavigationItem(
               icon: Icon(Icons.person, size: 20, color: Colors.black,),
-              title: 'Profile',
+              title: 'الحساب',
             ),
           ],
           onTap: (index) {
@@ -93,7 +93,7 @@ class MyNavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return icon;
+    //return icon;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
