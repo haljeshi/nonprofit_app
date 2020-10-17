@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class Goal {
-  ImageProvider imageMain;
+  String imageMain;
   List<ImageProvider> images;
   String title;
   String shortDesc;

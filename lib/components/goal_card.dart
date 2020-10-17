@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:oscharity/models/goal.dart';
+import 'package:oscharity/screens/goal_details.dart';
 
 class GoalCard extends StatelessWidget {
   final Goal goal;
@@ -26,7 +27,7 @@ class GoalCard extends StatelessWidget {
                 topRight: Radius.circular(20),
               ),
               child: Image(
-                image: goal.imageMain,
+                image: AssetImage(goal.imageMain),
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.fitWidth,
@@ -70,7 +71,11 @@ class GoalCard extends StatelessWidget {
                     text: "المزيد",
                     padding: EdgeInsets.symmetric(vertical: 0, horizontal: 2),
                     background: Colors.blueGrey,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => GoalDetails(goal: goal,)));
+                    },
                   ),
                 ),
                 Expanded(
